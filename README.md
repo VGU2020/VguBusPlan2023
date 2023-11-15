@@ -158,10 +158,10 @@ Project Link: [https://github.com/VGU2020/VguBusPlan2023](https://github.com/VGU
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/nguyen-van-khanh-262209269/
 [product-screenshot]: https://i.ibb.co/Kbk8Gxx/Screenshot-2023-11-15-221002.png
-[Python.js]: https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png
+[Python.js]: https://c0.klipartz.com/pngpicture/997/63/gratis-png-programacion-del-lenguaje-de-programacion-python-logo-programacion-informatica.png
 [Py-url]: https://www.python.org
 [Py-url-instruc]: https://www.geeksforgeeks.org/how-to-install-python-on-windows/
-[Docker.js]: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYOILu23RRQnZlnZ-1TvLY7nILER-xEgyeDw&usqp=CAU
+[Docker.js]: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIji1YPzVycPytcnFEJuRe9Xz_r3yh3tH-rA&usqp=CAU
 [Docker-url]: https://www.docker.com
 [Docker-url-instruc]: https://docs.docker.com/desktop/install/windows-install/
 [MongoDB.js]: https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png
