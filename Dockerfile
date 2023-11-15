@@ -6,7 +6,7 @@ COPY ./requirements.txt /requirements.txt
 
 # Install individual dependencies
 # so that we could avoid installing extra packages to the container
-RUN pip3 install -r requirements.txt
+RUN pip3 --default-timeout=100 install -r requirements.txt
 
 # Create work dicrectory
 RUN mkdir /app

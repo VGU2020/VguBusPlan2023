@@ -1,0 +1,11 @@
+{% extends "base.html" %} 
+    {% block title %}
+        Home
+    {% endblock %}
+
+    {% block content %}    
+        <video autoplay loop muted plays-inline>
+            <source type="video/mp4", src="{{ url_for('static', filename='resources/video2.mp4') }}">
+        </video>
+    {% endblock %}
+
