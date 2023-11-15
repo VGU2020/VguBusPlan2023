@@ -158,7 +158,7 @@ Project Link: [https://github.com/VGU2020/VguBusPlan2023](https://github.com/VGU
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/nguyen-van-khanh-262209269/
 [product-screenshot]: https://i.ibb.co/Kbk8Gxx/Screenshot-2023-11-15-221002.png
-[Python.js]: https://cdn.freebiesupply.com/logos/large/2x/python-2-logo-black-and-white.png
+[Python.js]: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5wMldXyBe7CrECIU-CT9-f6QWNj-nyiGOG59WXO8DU8Ic3Yd7njnSoyXnu7dp6uTzLA&usqp=CAU
 [Py-url]: https://www.python.org
 [Py-url-instruc]: https://www.geeksforgeeks.org/how-to-install-python-on-windows/
 [Docker.js]: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/2560px-Docker_%28container_engine%29_logo.svg.png
