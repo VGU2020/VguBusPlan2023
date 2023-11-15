@@ -78,7 +78,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-A small Preview of the Project main Map view.
+A small Preview of the Project main Map view Function.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,7 +94,7 @@ A small Preview of the Project main Map view.
 
 ## Getting Started
 
-There is some requirements and steps before running the app
+There are some requirements and steps before running the app
 
 ### Prerequisites
 
