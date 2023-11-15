@@ -1,0 +1,20 @@
+#GitHub (CMD)
+
+$git add . #update what will be commited
+
+$git commit -m "<commit_name>" #Initiate the commit
+
+$git push #upload local repository content to a remote repository
+
+#Docker (CMD)
+docker build . -t bus
+docker run -p 8001:8000 -it --rm bus
+
+$docker compose up . #build image for docker
+
+#Virtualenv
+$Set-ExecutionPolicy Unrestricted -Scope Process
+$env\Scripts\activate
+$deactivate
+
+
