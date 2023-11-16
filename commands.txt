@@ -19,4 +19,4 @@ $ deactivate
 
 $ pip install -r requirements.txt
 
-lmao
+
