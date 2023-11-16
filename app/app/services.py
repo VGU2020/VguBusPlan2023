@@ -150,7 +150,7 @@ def map_realtime(network: Network, map: folium.Map):
     # Create a feature group for each route and add it to the map
     for i, route_id in enumerate(route_ids):
         if route_id != None:
-            collection = routes_to_geojson(network=network, route_ids=[route_id])
+            collection = routes_to_geojson(network=network, route_ids=[int(route_id)])
 
             # Use route short name for group name if possible; otherwise use route ID
             route_name = route_id
@@ -170,7 +170,7 @@ def map_realtime(network: Network, map: folium.Map):
                     lon, lat = f["geometry"]["coordinates"]
                     folium.CircleMarker(
                         location=[lat, lon],
-                        radius=3,
+                        radius=5,
                         fill=True,
                         color=color,
                         weight=1,
