@@ -8,7 +8,6 @@ from .kit import *
 
 
 network = getData()
-
 network_copy = Network()
 
 

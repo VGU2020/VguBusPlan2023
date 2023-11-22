@@ -172,6 +172,7 @@ def routes_to_geojson(
         route_ids = network.routes.route_id
 
     D = set(route_ids) - set(network.routes.route_id)
+
     if D:
         raise ValueError(f"Route IDs {D} not found in network.")
 

@@ -1,10 +1,11 @@
+import folium
+import pandas as pd
+
 from .db import connect_db
 from .models import Network
 from .kit import *
-import folium
 from folium import plugins
-import pandas as pd
-from .gtfsrt import parser
+from .gtfsrt import gtfs
 
 
 COLORS_SET2 = [
@@ -19,32 +20,11 @@ COLORS_SET2 = [
 ]
 
 
-def initMap():
-    m = folium.Map(location=[39.749563, -104.97364], zoom_start=13, tiles="openstreetmap")
-
-    return m
-
-
-def mapHTML():    
-    html = """
-        {% extends "base.html" %} 
-        {% block title %}
-            Map
-        {% endblock %}
-
-        {% block content %}
-            <div id='map'> {{ map | safe }} </div>      
-        {% endblock %}
-    """
-    return html
-
-
 def mapTag(map):
     plugins.Fullscreen(                                                         
-        position                = "topleft",                                   
+        position                = "topright",                                   
         title                   = "Open full-screen map",                       
         title_cancel            = "Close full-screen map",                      
-        # force_separate_button   = True,                                         
     ).add_to(map) 
 
     return map.get_root()._repr_html_()
@@ -63,19 +43,20 @@ def getData() -> Network:
         shapes=pd.DataFrame(db["shapes"].find({}, {"_id": 0}).sort({ "$natural": 1 })),
         stops=pd.DataFrame(db["stops"].find({}, { "_id": 0}).sort({ "$natural": 1 })),
         trips=pd.DataFrame(db["trips"].find({}, { "_id": 0}).sort({ "$natural": 1 })),
+        vehicle_positions = gtfs.updateVehiclePositions()
     )
-    network.vehicle_positions = parser.updateVehiclePositions()
 
     return network
 
 
-def map_routes(map: folium.Map):
+def map_routes(network: Network):
     """
     Showing the given routes and (optionally) their stops to the folium map.
     If any of the given route IDs are not found in the network, then raise a ValueError.
+    Return as folium map
     """
-    # Initialize Network model
-    network = getData()
+    # Initialize map
+    map = folium.Map(location=[44.731808, -93.238322], zoom_start=13, tiles="cartodbpositron")
 
     route_ids = network.routes.route_id.iloc[:]
 
@@ -101,7 +82,7 @@ def map_routes(map: folium.Map):
         color = colors[i]
 
         for f in collection["features"]:
-            prop = f["properties"]
+            prop = {k: f["properties"].get(k) for k in ["stop_id", "stop_name"]}
 
             # Add stop
             if f["geometry"]["type"] == "Point":
@@ -135,9 +116,16 @@ def map_routes(map: folium.Map):
     bounds = so.unary_union(bboxes).bounds
     bounds2 = [bounds[1::-1], bounds[3:1:-1]]  # Folium expects this ordering
     map.fit_bounds(bounds2)
+    return map
 
 
-def map_realtime(network: Network, map: folium.Map):
+def map_realtime(network: Network):
+    """
+    Return as folium map
+    """
+    # Initialize map
+    map = folium.Map(location=[44.731808, -93.238322], zoom_start=13, tiles="openstreetmap")
+    
     route_ids = network.vehicle_positions["route_id"].iloc[:]
 
     # Create route colors
@@ -163,14 +151,13 @@ def map_realtime(network: Network, map: folium.Map):
             color = colors[i]
 
             for f in collection["features"]:
-                prop = f["properties"]
-
+                prop = {k: f["properties"].get(k) for k in ["stop_id", "stop_name"]}
                 # Add stop
                 if f["geometry"]["type"] == "Point":
                     lon, lat = f["geometry"]["coordinates"]
                     folium.CircleMarker(
                         location=[lat, lon],
-                        radius=5,
+                        radius=3,
                         fill=True,
                         color=color,
                         weight=1,
@@ -183,10 +170,13 @@ def map_realtime(network: Network, map: folium.Map):
                                     popup=make_html(attr),
                                     radius=8, color='red').add_to(group)
             group.add_to(map)
-
+            
+    plugins.Fullscreen(position="topright").add_to(map)
     folium.LayerControl().add_to(map)
 
     # Fit map to bounds
     bounds = so.unary_union(bboxes).bounds
     bounds2 = [bounds[1::-1], bounds[3:1:-1]]  # Folium expects this ordering
     map.fit_bounds(bounds2)
+
+    return map
