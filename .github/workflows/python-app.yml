@@ -40,7 +40,7 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          python -m pytest --import-mode=append tests/
+          python -m pytest --import-mode=append app/app/tests/
   # Build and push the Docker image
   push_to_registry:
     name: Build and push Docker image to Docker Hub
