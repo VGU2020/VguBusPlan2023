@@ -115,7 +115,7 @@ There are some requirements and steps before running the app
 4. Choose `Map` to access the main Map
 5. Run this command to bring the project down
    ```sh
-   Docker compose up
+   Docker compose down
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
