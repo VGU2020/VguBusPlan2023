@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title %} Forecast {% endblock %} {% block
+content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    <title>Forecast</title>
+  </head>
+
+  <body>
+    <table id="tb">
+      <tr>
+        <th>TIMESTAMP</th>
+        <th>TRIP ID</th>
+        <th>ROUTE ID</th>
+        <th>LABEL</th>
+        <th>CONGESTION LV</th>
+        <th>PREDICT TIME</th>
+        <th>PROBABILITY</th>
+      </tr>
+    </table>
+
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/predict.js') }}"
+    ></script>
+  </body>
+</html>
+{% endblock %}

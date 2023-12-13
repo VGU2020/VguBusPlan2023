@@ -1,0 +1,315 @@
+{% extends "base.html" %} {% block title %} Home {% endblock %} {% block content
+%}
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+            <div class="title">
+            </h1> BusApp </h1>
+            </div>
+        </div>
+      </header>
+      <!-- end header section -->
+      <!-- slider section -->
+      <section class="slider_section position-relative">
+        <div class="slider_container">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/hero-img.jpg') }}" alt="" />
+          </div>
+          <div class="detail_container">
+            <div
+              id="BusApp"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="detail-box">
+                    <h1>
+                      Visualization<br />
+                      Prediction
+                    </h1>
+                    <a href="/map">Open App</a>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#BusApp"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#BusApp"
+                role="button"
+                data-slide="next"
+              >
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end slider section -->
+
+    <!-- car section -->
+
+    <section class="car_section layout_padding2-top layout_padding-bottom">
+      <div class="container">
+        <div class="heading_container">
+          <h2>Better way to monitor Buses</h2>
+          <p>
+            with visulization and prediction
+          </p>
+        </div>
+        <div class="car_container">
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/c-1.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Choose Your Route to visualize</h5>
+              <p>
+                Decide which route to show and which route to hide
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/c-2.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Monitor Buses in Real time</h5>
+              <p>
+                Realtime data Update every minute
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/c-3.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Congestion level prediction</h5>
+              <p>
+                Machine-learning model to predict traffic jam
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end car section -->
+
+    <!-- about section -->
+
+    <section class="about_section layout_padding-bottom">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-7 px-0">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/about-img.png') }}" alt="" />
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="detail-box">
+              <h2>About Our App</h2>
+              <p>
+                A project aim for helping Bus operator monitoring Buses in duty
+              </p>
+              <a href="https://github.com/VGU2020/VguBusPlan2023#readme"> Read More </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end about section -->
+    <!-- us section -->
+
+    <section class="us_section">
+      <div class="container">
+        <div class="heading_container">
+          <h2>Why choose Us</h2>
+        </div>
+      </div>
+      <div class="us_container layout_padding2">
+        <div class="content_box">
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/u-1.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Lightweight</h5>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/u-2.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Details</h5>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/u-3.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Easy to use</h5>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/u-4.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>Quick Support</h5>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <a href=""> Read More </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- end us section -->
+
+    <!-- contact section -->
+
+    <section class="contact_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>Request A call back</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="form_container">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputName4"
+                      placeholder="Name "
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputSubject4"
+                      placeholder="Phone"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Email id"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputMessage"
+                    placeholder="Message"
+                  />
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="contact_items">
+          <a href="">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/location.png') }}" alt="" />
+            </div>
+            <h6>VGU Student</h6>
+          </a>
+          <a href="">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/call.png') }}" alt="" />
+            </div>
+            <h6>+84 0xxxxxxxx</h6>
+          </a>
+          <a href="">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/mail.png') }}" alt="" />
+            </div>
+            <h6>170xx@student.vgu.edu.vn</h6>
+          </a>
+        </div>
+        <div class="social_container">
+          <div class="social-box">
+            <div>
+              <a href="">
+                <img src="{{ url_for('static', filename='images/fb.png') }}" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="{{ url_for('static', filename='images/twitter.png') }}" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="{{ url_for('static', filename='images/insta.png') }}" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end contact section -->
+
+    <!-- map section -->
+
+    <section class="map_section">
+      <!-- map section -->
+      <div class="map_container">
+        <div class="map-responsive">
+          <iframe
+            src="https://maps.google.com/maps?q=minneapolis&t=&z=10&ie=UTF8&iwloc=&output=embed"
+            width="600"
+            height="300"
+            frameborder="0"
+            style="border: 0; width: 100%; height: 100%"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <!-- end map section -->
+    </section>
+
+    <!-- end map section -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
+{% endblock %}
+
