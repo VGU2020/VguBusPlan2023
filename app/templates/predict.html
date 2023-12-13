@@ -1,8 +1,0 @@
-{% extends "base.html" %} {% block title %} Prediction {% endblock %} {% block
-content %}
-<div id="predict">{{ predict | safe }}</div>
-<script
-  type="text/javascript"
-  src="{{ url_for('static', filename='js/predict_script.js') }}"
-></script>
-{% endblock %}
