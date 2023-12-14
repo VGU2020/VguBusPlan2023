@@ -10,4 +10,4 @@ services:
     volumes:
       - ./app:/app
     command: >
-      sh -c "python producer.py && python views.py"
+      sh -c "python main.py"
