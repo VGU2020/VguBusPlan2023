@@ -4,8 +4,8 @@ import pandas as pd
 from sklearn.model_selection import TimeSeriesSplit
 
 
-FEATURES = ["congestion_level", "route_id", "label"]
-TARGET = 'speed'
+FEATURES = ["speed", "route_id", "label"]
+TARGET = 'congestion_level'
 
 
 def data_wrangling(df: pd.DataFrame):
@@ -59,6 +59,7 @@ def predict(model, realtime_df):
     result_df = data_wrangling(realtime_df)
     result_df = result_df[["timestamp", "trip_id", "route_id", "label", "congestion_level", "speed", "predict_time"]]
     result_df['prediction'] = model.predict(realtime_df[FEATURES])
-
+    result_df['prediction'] = result_df['prediction'].abs()
+    
     return result_df
 

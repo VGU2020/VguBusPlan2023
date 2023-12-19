@@ -222,8 +222,8 @@ def publisher(static_url: str, realtime_url: str):
             collections_list = obj_to_geojson(network=network, vehicle_positions=data)
             message = json.dumps(collections_list)
             prediction = json.dumps(forecast.to_dict("records"))
-            producer.produce("bus_locations", message.encode("utf_8"))
-            producer.produce("predictions", prediction.encode("utf_8"))
+            producer.produce("Bus", message.encode("utf_8"))
+            producer.produce("RealTime", prediction.encode("utf_8"))
             print(len(collections_list))
 
         except KeyboardInterrupt:

@@ -15,8 +15,8 @@ def connect_db():
 
 def insert(items):
     "Insert data to mongoDB"
+    if not items.empty:
+        mongodb = connect_db()
+        collection = mongodb["vehicle_position"]
 
-    mongodb = connect_db()
-    collection = mongodb["vehicle_position"]
-
-    collection.insert_many(items.to_dict("records"))
+        collection.insert_many(items.to_dict("records"))

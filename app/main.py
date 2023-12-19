@@ -1,6 +1,6 @@
 from views import app
-from services import publisher
-from threading import Thread
+
+
 
 WELCOME = """\033[1;31m
 
@@ -37,16 +37,19 @@ LOGO = """\033[1;32m
                     '-'                          '-'
 """
 
-
 if __name__ == "__main__":
     print(WELCOME)
     print(LOGO)
-    # static_url = input("\033[1;35m[+] Please enter the static url: ")
-    # realtime_url = input("\033[1;35m[+] Please enter the realtime url: ")
 
-    try:
-        t1 = Thread(target=publisher, args=("http://srv.mvta.com/InfoPoint/GTFS-Zip.ashx", "https://srv.mvta.com/infoPoint/GTFS-realtime.ashx?Type=VehiclePosition"), daemon=True)
-        t1.start()
-        app.run(host='0.0.0.0', port=8000, debug=True, use_reloader=False)
-    except KeyboardInterrupt:
-        pass
+    # static_url = ("http://srv.mvta.com/InfoPoint/GTFS-Zip.ashx")
+    # realtime_url = ("https://srv.mvta.com/infoPoint/GTFS-realtime.ashx?Type=VehiclePosition")
+    # static_url = request.form["static_url"]
+    # realtime_url = request.form["realtime_url"]
+   
+    # try:
+    #     t1 = Thread(target=publisher, args=(static_url, realtime_url), daemon=True)
+    #     t1.start()
+    app.run(host='0.0.0.0', port=8000, debug=True, use_reloader=False)
+    # except KeyboardInterrupt:
+    #     pass
+    

@@ -1,4 +1,4 @@
-from services import consumer_client
+from services import consumer_client, publisher
 
 
 map_consumer = consumer_client()

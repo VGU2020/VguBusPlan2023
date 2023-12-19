@@ -92,6 +92,7 @@ source.addEventListener(
                   color: check_congestion_level(
                     feature.properties.congestion_level
                   ),
+                  weight: 5,
                 };
             }
           },

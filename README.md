@@ -38,7 +38,7 @@
     <a href="https://github.com/VGU2020/VguBusPlan2023"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/VGU2020/VguBusPlan2023">View Demo</a>
+    <a href="https://www.youtube.com/watch?v=K176nGGHK7k">View Demo</a>
     ·
     <a href="https://github.com/VGU2020/VguBusPlan2023/issues">Report Bug</a>
     ·
@@ -80,6 +80,8 @@
 
 A small Preview of the Project main Map view Function.
 
+## Demo Video
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
@@ -98,8 +100,8 @@ There are some requirements and steps before running the app
 
 ### Prerequisites
 
-- Python 3.12
-  install Python 3.12 according to [[Python install instruction]][Py-url-instruc]
+- Python >= 3.9
+  install Python 3.9 according to [[Python install instruction]][Py-url-instruc]
 - Docker Desktop
   install Docker according to [[Docker install instruction]][Docker-url-instruc]
 
@@ -122,9 +124,11 @@ There are some requirements and steps before running the app
 
 <!-- USAGE EXAMPLES -->
 
-## Usage
+## User Usage
 
 This Project can show bus stop and bus location in real time in order to help the Bus Operator control the buses status in an area
+
+Use this IP address to access the deployed webapp on AWS service : `13.239.114.129:8000 `
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -135,16 +139,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 Nguyen Van Khanh - nomorehero.python.it@gmail.com
 
 Project Link: [https://github.com/VGU2020/VguBusPlan2023](https://github.com/VGU2020/VguBusPlan2023)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- []()
-- []()
-- []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

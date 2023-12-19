@@ -1,12 +1,20 @@
-from flask import Flask, render_template, Response
-from controller import map_consumer, table_consumer
-
+from flask import Flask, render_template, Response, request, redirect, url_for
+from controller import map_consumer, table_consumer, publisher
+from threading import Thread
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template("Home.html")
+    if request.method == 'GET':
+        return render_template("Home.html")
+
+    if request.method == 'POST':
+        static_url = request.form["static_url"]
+        realtime_url = request.form["realtime_url"]
+        t1 = Thread(target=publisher, args=(static_url, realtime_url), daemon=True)
+        t1.start()
+        return redirect(url_for("map"))
 
 @app.route('/map')
 def map():
@@ -17,7 +25,7 @@ def map():
 def stream():
     def consume():
         try:
-            map_consumer.subscribe(["bus_locations"])
+            map_consumer.subscribe(["Bus"])
             while 1:
                 msg = map_consumer.poll(1.0)
                 if msg is None:
@@ -41,7 +49,7 @@ def table():
 def predict():
     def consume():
         try:
-            table_consumer.subscribe(["predictions"])
+            table_consumer.subscribe(["RealTime"])
             while 1:
                 msg = table_consumer.poll(1.0)
                 if msg is None:
