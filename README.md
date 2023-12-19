@@ -82,6 +82,8 @@ A small Preview of the Project main Map view Function.
 
 ## Demo Video
 
+[![Watch the video](https://img.youtube.com/vi/K176nGGHK7k/maxresdefault.jpg)](https://www.youtube.com/watch?v=K176nGGHK7k)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
@@ -124,11 +126,11 @@ There are some requirements and steps before running the app
 
 <!-- USAGE EXAMPLES -->
 
-## User Usage
+## Usage
 
 This Project can show bus stop and bus location in real time in order to help the Bus Operator control the buses status in an area
 
-Use this IP address to access the deployed webapp on AWS service : `13.239.114.129:8000 `
+Use This IP address to access the deployed webapp on AWS service : `13.239.114.129:8000 `
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
