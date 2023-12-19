@@ -86,6 +86,16 @@ A small Preview of the Project main Map view Function.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+This Project can show bus stop and bus location in real time in order to help the Bus Operator control the buses status in an area
+
+Use This IP address to access the deployed webapp on AWS service : [13.239.114.129:8000](13.239.114.129:8000)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Built With
 
 - [![Py][Python.js]][Py-url]
@@ -121,18 +131,6 @@ There are some requirements and steps before running the app
    ```sh
    Docker compose down
    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-This Project can show bus stop and bus location in real time in order to help the Bus Operator control the buses status in an area
-
-Use This IP address to access the deployed webapp on AWS service : `13.239.114.129:8000 `
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
