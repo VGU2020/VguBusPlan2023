@@ -10,7 +10,7 @@ TARGET = 'congestion_level'
 
 def data_wrangling(df: pd.DataFrame):
     df['timestamp'] = pd.to_datetime(df['timestamp'])
-    df["predict_time"] = (df["timestamp"] + pd.Timedelta(value='10 minutes')).astype(str)
+    df["predict_time"] = (df["timestamp"] + pd.Timedelta(value='1 minutes')).astype(str)
     df = df.astype({'timestamp': 'str'})
     return df
 
@@ -59,8 +59,7 @@ def predict(model, realtime_df):
     result_df = data_wrangling(realtime_df)
     result_df = result_df[["timestamp", "trip_id", "route_id", "label", "congestion_level", "speed", "predict_time"]]
     result_df['prediction'] = model.predict(realtime_df[FEATURES])
-    result_df['prediction'] = result_df['prediction'].abs()
-    
+
     return result_df
 
 def train_with_past_data(csv_file_path):
@@ -68,4 +67,3 @@ def train_with_past_data(csv_file_path):
     model = train(past_data)
     
     return model
-

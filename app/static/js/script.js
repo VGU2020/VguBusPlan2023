@@ -40,14 +40,45 @@ function add_geojson(group, feature) {
 }
 
 function check_congestion_level(level) {
-  if (level < 2) {
+  if (level == 0) {
     return "green";
+  } else if (level == 1) {
+    return "#FFB534";
   } else if (level == 2) {
-    return "yellow";
+    return "#FF9800";
+  } else if (level == 3) {
+    return "#EF4040";
   } else {
-    return "red";
+    return "#B80000";
   }
 }
+
+var legend = L.control({ position: "bottomright" });
+
+legend.onAdd = function (map) {
+  var div = L.DomUtil.create("div", "info legend"),
+    grades = [0, 1, 2, 3, 4],
+    labels = [
+      "RUNNING SMOOTHLY",
+      "LITTE CROWDED",
+      "STOP AND GO",
+      "CONGESTION",
+      "SEVERE CONGESTION",
+    ];
+
+  // loop through our density intervals and generate a label with a colored square for each interval
+  for (var i = 0; i < grades.length; i++) {
+    div.innerHTML +=
+      '<i style="background:' +
+      check_congestion_level(grades[i]) +
+      '"></i> ' +
+      labels[i] +
+      "<br>";
+  }
+
+  return div;
+};
+legend.addTo(map);
 
 var layerControl;
 
@@ -100,7 +131,7 @@ source.addEventListener(
           },
         }).addTo(map);
 
-        overlays[element.properties.trip_id] = gj;
+        overlays[element.properties.route_id] = gj;
       }
     });
 

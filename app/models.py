@@ -104,7 +104,6 @@ class Segment(object):
             "type": "Feature",
             "object": "Segment",
             "properties": {
-                "trip_id": self.trip_id,
                 "congestion_level": self.congestion_lv,
             },
             "geometry": {

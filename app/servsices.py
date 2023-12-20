@@ -1,10 +1,10 @@
 import datetime, time
+import random
 import gtfs_realtime_pb2
 import urllib.request
 import pandas as pd
 import json2html
 import zipfile
-import random
 import requests
 import tempfile
 import json
@@ -25,7 +25,7 @@ def producer_client():
     return Producer(PRODUCER_CONFIG)
 
 
-def fetch_train_data():
+def fetch_train_data() -> pd.DataFrame:
     mongodb = connect_db()
     data = pd.DataFrame(mongodb['vehicle_position'].find({}, {"_id": 0}))
     data = data.astype({'label':'int'})
@@ -244,5 +244,5 @@ def publisher(static_url: str, realtime_url: str):
         except KeyboardInterrupt:
             break
 
-        time.sleep(10 - time.time() % 10)
+        time.sleep(60 - time.time() % 60)
 

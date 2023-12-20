@@ -6,7 +6,8 @@ CONSUMER_CONFIG = {
     "sasl.username": "EFNEGZ54CAYOM4P7",
     "sasl.password": "AwqBCbLqDCI7MDVAaFqn7qGHVLY2RD06j63AAic8gAlBGNj8xmiVBg0p6+eSNvpw",
     "group.id": "bus",
-    "auto.offset.reset": "earliest"
+    "auto.offset.reset": "earliest",
+    "max.partition.fetch.bytes": 8388608,
 }
 
 PRODUCER_CONFIG = {
@@ -15,6 +16,7 @@ PRODUCER_CONFIG = {
     "sasl.mechanisms": "PLAIN",
     "sasl.username": "EFNEGZ54CAYOM4P7",
     "sasl.password": "AwqBCbLqDCI7MDVAaFqn7qGHVLY2RD06j63AAic8gAlBGNj8xmiVBg0p6+eSNvpw",
+    "message.max.bytes": 8388608,
 }
 
 
