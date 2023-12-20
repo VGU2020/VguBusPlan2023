@@ -229,5 +229,5 @@ def publisher(static_url: str, realtime_url: str):
         except KeyboardInterrupt:
             break
 
-        time.sleep(60 - time.time() % 60)
+        time.sleep(10 - time.time() % 10)
 

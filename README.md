@@ -106,7 +106,7 @@ Use This IP address to access the deployed webapp on AWS service : [13.239.114.1
 
 <!-- GETTING STARTED -->
 
-## Getting Started
+## Getting App to Run local
 
 There are some requirements and steps before running the app
 
