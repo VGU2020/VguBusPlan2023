@@ -78,11 +78,11 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-A small Preview of the Project main Map view Function.
+A small Preview of the 0.1 demo Project main Map view Function.
 
 ## Demo Video
 
-[![Watch the video](https://img.youtube.com/vi/K176nGGHK7k/maxresdefault.jpg)](https://www.youtube.com/watch?v=K176nGGHK7k)
+[![Watch the video](https://youtu.be/UNYnWZMsniE)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
