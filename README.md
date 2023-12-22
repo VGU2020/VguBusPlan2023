@@ -82,7 +82,7 @@ A small Preview of the 0.1 demo Project main Map view Function.
 
 ## Demo Video
 
-[![Watch the video](https://youtu.be/UNYnWZMsniE)
+[![Watch the video](https://img.youtube.com/vi/UNYnWZMsniE/maxresdefault.jpg)](https://youtu.be/UNYnWZMsniE)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
